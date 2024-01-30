@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/home/Home";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/" element={<Home />}></Route>
+
         <Route path="/incomplete-tasks" element={<h1>Incomplete Tasks</h1>} />
         <Route path="/completed-tasks" element={<h1>Completed Tasks</h1>} />
         <Route path="/overdue-tasks" element={<h1>Overdue Tasks</h1>} />
