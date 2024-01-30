@@ -50,7 +50,7 @@
   color: black;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .home-outer {
     height: 100%;
   }
