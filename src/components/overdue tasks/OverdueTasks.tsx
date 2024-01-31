@@ -129,7 +129,6 @@ const OverdueTasks = () => {
                   value={taskValue}
                   onChange={taskChangeHandler}
                   type="text"
-                  placeholder="enter task"
                 />
               </header>
               <header>
@@ -138,6 +137,7 @@ const OverdueTasks = () => {
                   value={dateValue}
                   onChange={dateChangeHandler}
                   type="date"
+                  placeholder="Enter date"
                 />
               </header>
               <header>

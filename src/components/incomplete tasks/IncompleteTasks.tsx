@@ -202,7 +202,7 @@ const IncompleteTasks = () => {
                   onChange={taskInputChangeHandler}
                   required
                   type="text"
-                  placeholder="enter task"
+                  placeholder="Enter task"
                 />
               </header>
               <header>
@@ -210,6 +210,7 @@ const IncompleteTasks = () => {
                   value={inputDate}
                   onChange={dateInputChangeHandler}
                   required
+                  placeholder="Enter date"
                   type="date"
                 />
               </header>
