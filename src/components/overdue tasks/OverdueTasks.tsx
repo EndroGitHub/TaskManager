@@ -123,16 +123,20 @@ const OverdueTasks = () => {
               <h2>RESCHEDULE TASK</h2>
             </header>
             <form onSubmit={submitHandler}>
-              <header>
+              <header className="overdue-tasks-schedule-form-header">
+                <label htmlFor="task">Task</label>
                 <input
+                  id="task"
                   required
                   value={taskValue}
                   onChange={taskChangeHandler}
                   type="text"
                 />
               </header>
-              <header>
+              <header className="overdue-tasks-schedule-form-header">
+                <label htmlFor="date">Due Date</label>
                 <input
+                  id="date"
                   required
                   value={dateValue}
                   onChange={dateChangeHandler}

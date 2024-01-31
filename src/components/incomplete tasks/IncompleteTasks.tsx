@@ -196,21 +196,24 @@ const IncompleteTasks = () => {
               <h2>ADD TASK</h2>
             </header>
             <form onSubmit={submitHandler}>
-              <header>
+              <header className="incomplete-tasks-add-data-form-header">
+                <label htmlFor="task">Task</label>
                 <input
+                  id="task"
+                  autoComplete="off"
                   value={inputTask}
                   onChange={taskInputChangeHandler}
                   required
                   type="text"
-                  placeholder="Enter task"
                 />
               </header>
-              <header>
+              <header className="incomplete-tasks-add-data-form-header">
+                <label htmlFor="task">Due Date</label>
                 <input
+                  id="date"
                   value={inputDate}
                   onChange={dateInputChangeHandler}
                   required
-                  placeholder="Enter date"
                   type="date"
                 />
               </header>
