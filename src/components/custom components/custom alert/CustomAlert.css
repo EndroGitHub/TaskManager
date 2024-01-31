@@ -1,0 +1,48 @@
+.custom-alert-outer {
+  position: absolute;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  z-index: 4;
+}
+
+.custom-alert-alert {
+  position: relative;
+  width: 400px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgb(31, 32, 43);
+}
+.custom-alert-alert p {
+  color: white;
+  text-align: center;
+}
+
+.custom-alert-alert header {
+  text-align: center;
+}
+.custom-alert-alert header button {
+  width: 100px;
+  margin: 0px 20px;
+  padding: 5px 0px;
+  border: none;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.custom-alert-alert header button:hover {
+  background: white;
+  color: black;
+}
