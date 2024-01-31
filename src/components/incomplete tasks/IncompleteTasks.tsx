@@ -6,6 +6,7 @@ type taskDataType = {
   taskId?: number;
   task?: string;
   dueDate?: string;
+  dateCompleted?: string;
   isComplete?: boolean;
 }[];
 
@@ -102,6 +103,7 @@ const IncompleteTasks = () => {
       let taskId = Number(localStorage.getItem("id"));
       let task = inputTask;
       let dueDate = inputDate;
+      let dateCompleted = "";
       let isComplete = false;
 
       let newId = Number(localStorage.getItem("id")) + 1;
@@ -118,6 +120,7 @@ const IncompleteTasks = () => {
           taskId: taskId,
           task: task,
           dueDate: dueDate,
+          dateCompleted: dateCompleted,
           isComplete: isComplete,
         },
       ];
@@ -148,6 +151,7 @@ const IncompleteTasks = () => {
       let newData = fullData;
       let index = newData.map((ins) => ins.taskId).indexOf(activeTaskId);
       newData[index].isComplete = true;
+      newData[index].dateCompleted = dateToday;
       localStorage.setItem("tasks", JSON.stringify(newData));
       setTaskMarked(true);
     }
@@ -210,7 +214,7 @@ const IncompleteTasks = () => {
                 />
               </header>
               <header>
-                <button>ADD</button>
+                <button type="submit">ADD</button>
               </header>
             </form>
           </div>

@@ -1,0 +1,79 @@
+.completed-tasks-outer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+  user-select: none;
+}
+.completed-tasks-inner {
+  width: 70%;
+  padding: 12px;
+}
+
+.completed-tasks-heading h1 {
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.completed-tasks-empty {
+  background: rgb(31, 32, 43);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.completed-tasks-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(31, 32, 43);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.completed-tasks-data-task-div {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+}
+.completed-tasks-data-task-div p {
+  border-bottom: 1px solid rgb(59, 59, 59);
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: normal;
+  font-size: 1em;
+}
+.completed-tasks-data-date-div {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+}
+.completed-tasks-data-date-div p {
+  border-bottom: 1px solid rgb(59, 59, 59);
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+@media (max-width: 800px) {
+  .completed-tasks-data {
+    border-radius: 0px;
+  }
+  .completed-tasks-inner {
+    width: 100%;
+    padding: 12px 0px;
+  }
+  .completed-tasks-heading h1 {
+    font-size: 1.5em;
+  }
+}
