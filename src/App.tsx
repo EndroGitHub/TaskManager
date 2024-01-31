@@ -3,6 +3,7 @@ import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import IncompleteTasks from "./components/incomplete tasks/IncompleteTasks";
 import CompletedTasks from "./components/completed tasks/CompletedTasks";
+import OverdueTasks from "./components/overdue tasks/OverdueTasks";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         <Route element={<Navbar />}>
           <Route path="/incomplete-tasks" element={<IncompleteTasks />} />
           <Route path="/completed-tasks" element={<CompletedTasks />} />
-          <Route path="/overdue-tasks" element={<h1>Overdue Tasks</h1>} />
+          <Route path="/overdue-tasks" element={<OverdueTasks />} />
         </Route>
 
         <Route path="*" element={<h1>Route do not exist</h1>} />

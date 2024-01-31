@@ -24,6 +24,9 @@ const Navbar = () => {
 
   const [destination, setDestination] = useState<string>(value);
   const [showOptions, setShowOptions] = useState<boolean>(false);
+  const [dateToday, setDateToday] = useState<string>(
+    new Date().toISOString().slice(0, 10)
+  );
 
   const changeDestination = (value: number) => {
     if (value === 1) {
@@ -42,7 +45,15 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="navbar-nav">
+      {showOptions && (
+        <div
+          onClick={() => {
+            setShowOptions(false);
+          }}
+          className="navbar-overlay"
+        ></div>
+      )}
+      <nav style={showOptions ? { zIndex: 2 } : {}} className="navbar-nav">
         <div className="navbar-current">
           {destination}
           {showOptions && (
@@ -78,6 +89,7 @@ const Navbar = () => {
           className={`navbar-arrow ${showOptions ? "up" : "down"}`}
         >{`>`}</div>
       </nav>
+      <div className="navbar-date">DATE: {dateToday}</div>
       <Outlet />
     </>
   );

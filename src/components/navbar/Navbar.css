@@ -5,6 +5,15 @@
   display: flex;
   justify-content: center;
   user-select: none;
+  border-bottom: 1px solid white;
+}
+.navbar-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .navbar-current {
   position: relative;
@@ -53,6 +62,15 @@
 }
 .navbar-arrow.up {
   transform: rotate(-90deg);
+}
+
+.navbar-date {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 12px 0px;
+  background: rgb(31, 32, 43);
+  user-select: none;
 }
 
 @media (max-width: 600px) {

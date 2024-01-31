@@ -3,7 +3,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 20px 0px;
+  margin-top: 20px;
+  margin-bottom: 80px;
   user-select: none;
 }
 .completed-tasks-inner {

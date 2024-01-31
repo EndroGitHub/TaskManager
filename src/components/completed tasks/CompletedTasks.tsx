@@ -9,11 +9,10 @@ type taskDataType = {
   isComplete?: boolean;
 }[];
 
-if (!localStorage.getItem("id")) {
-  localStorage.setItem("id", "1");
-}
-
 const CompletedTasks = () => {
+  if (!localStorage.getItem("id")) {
+    localStorage.setItem("id", "1");
+  }
   const [taskData, setTaskData] = useState<taskDataType>([]);
   const [isEmpty, setIsEmpty] = useState<boolean>(false);
 
@@ -57,6 +56,7 @@ const CompletedTasks = () => {
       setIsEmpty(true);
     }
   };
+
   return (
     <>
       <div className="completed-tasks-outer">

@@ -242,7 +242,7 @@ const IncompleteTasks = () => {
 
           {isEmpty ? (
             <div className="incomplete-tasks-empty">
-              <p>NO INCOMPLETE TASKS MAYBE ADD ONE</p>
+              <p>NO TASKS CLICK ADD TASKS TO ADD ONE</p>
             </div>
           ) : (
             taskData.map((ins) => {

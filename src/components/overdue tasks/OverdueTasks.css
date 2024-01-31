@@ -1,4 +1,4 @@
-.incomplete-tasks-outer {
+.overdue-tasks-outer {
   position: relative;
   width: 100%;
   display: flex;
@@ -7,28 +7,25 @@
   margin-bottom: 80px;
   user-select: none;
 }
-
-.incomplete-tasks-inner {
+.overdue-tasks-inner {
   width: 70%;
   padding: 12px;
 }
 
-.incomplete-tasks-add {
+.overdue-tasks-schedule-outer {
   user-select: none;
   position: absolute;
-  position: fixed;
-  overflow: hidden;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.2);
-  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
-.incomplete-tasks-add-data {
+.overdue-tasks-schedule-inner {
   position: relative;
   background: rgb(31, 32, 43);
   width: 500px;
@@ -37,7 +34,7 @@
   box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2),
     -10 -10px 20px 0 rgba(0, 0, 0, 0.2);
 }
-.incomplete-tasks-add-data-cancel {
+.overdue-tasks-schedule-cancel {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +42,7 @@
   display: flex;
   justify-content: right;
 }
-.incomplete-tasks-add-data-cancel p {
+.overdue-tasks-schedule-cancel p {
   margin: 0;
   width: 40px;
   color: rgb(153, 153, 153);
@@ -53,18 +50,18 @@
   font-size: 1.5em;
   cursor: pointer;
 }
-.incomplete-tasks-add-data-cancel p:hover {
+.overdue-tasks-schedule-cancel p:hover {
   color: white;
 }
-.incomplete-tasks-add-data header {
+.overdue-tasks-schedule-inner header {
   text-align: center;
   margin-bottom: 15px;
 }
-.incomplete-tasks-add-data h2 {
+.overdue-tasks-schedule-inner h2 {
   margin: 0;
   color: white;
 }
-.incomplete-tasks-add-data input {
+.overdue-tasks-schedule-inner input {
   width: 80%;
   text-align: center;
   padding: 7px 12px;
@@ -73,7 +70,7 @@
   font-size: 1em;
   border-radius: 20px;
 }
-.incomplete-tasks-add-data button {
+.overdue-tasks-schedule-inner button {
   width: 150px;
   border: 2px solid white;
   background: transparent;
@@ -84,19 +81,19 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.incomplete-tasks-add-data button:hover {
+.overdue-tasks-schedule-inner button:hover {
   background: white;
   color: black;
 }
 
-.incomplete-tasks-heading h1 {
+.overdue-tasks-heading h1 {
   color: rgb(255, 255, 255);
   margin: 0;
   padding-bottom: 5px;
   text-align: center;
 }
 
-.incomplete-tasks-empty {
+.overdue-tasks-empty {
   background: rgb(31, 32, 43);
   text-align: center;
   color: white;
@@ -104,24 +101,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.incomplete-tasks-add-btn {
-  text-align: center;
-  padding: 12px;
-}
-.incomplete-tasks-add-btn button {
-  background: rgb(31, 32, 43);
-  border: none;
-  padding: 7px 20px;
-  color: rgb(201, 201, 201);
-  font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.incomplete-tasks-add-btn button:hover {
-  color: white;
-}
-
-.incomplete-tasks-data {
+.overdue-tasks-data {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,13 +111,13 @@
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.incomplete-tasks-data-task-div {
+.overdue-tasks-data-task-div {
   width: 100%;
   color: white;
   font-weight: bold;
   font-size: 1em;
 }
-.incomplete-tasks-data-task-div p {
+.overdue-tasks-data-task-div p {
   border-bottom: 1px solid rgb(59, 59, 59);
   margin: 0;
   margin-bottom: 10px;
@@ -145,13 +125,13 @@
   font-weight: normal;
   font-size: 1em;
 }
-.incomplete-tasks-data-date-div {
+.overdue-tasks-data-date-div {
   width: 100%;
   color: white;
   font-weight: bold;
   font-size: 1em;
 }
-.incomplete-tasks-data-date-div p {
+.overdue-tasks-data-date-div p {
   border-bottom: 1px solid rgb(59, 59, 59);
   margin: 0;
   margin-bottom: 10px;
@@ -160,7 +140,7 @@
   font-size: 1em;
 }
 
-.incomplete-tasks-data button {
+.overdue-tasks-data button {
   width: 135px;
   padding: 5px 0px;
   border: none;
@@ -168,45 +148,35 @@
   cursor: pointer;
   background: transparent;
   color: white;
-  border: 3px solid white;
+  border: 3px solid rgb(0, 97, 225);
 }
-.incomplete-tasks-data button:nth-child(1) {
-  border-color: rgb(0, 149, 0);
-}
-.incomplete-tasks-data button:nth-child(1):hover {
-  border-color: rgb(0, 214, 0);
-  color: rgb(0, 214, 0);
-}
-.incomplete-tasks-data button:nth-child(2) {
-  border-color: rgb(170, 0, 0);
-}
-.incomplete-tasks-data button:nth-child(2):hover {
-  border-color: rgb(255, 0, 0);
-  color: rgb(255, 0, 0);
+.overdue-tasks-data button:hover {
+  border-color: rgb(0, 157, 255);
+  color: rgb(0, 157, 255);
 }
 
 @media (max-width: 800px) {
-  .incomplete-tasks-data {
+  .overdue-tasks-data {
     border-radius: 0px;
   }
-  .incomplete-tasks-inner {
+  .overdue-tasks-inner {
     width: 100%;
     padding: 12px 0px;
   }
-  .incomplete-tasks-heading h1 {
+  .overdue-tasks-heading h1 {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 600px) {
-  .incomplete-tasks-add-data {
+  .overdue-tasks-schedule-inner {
     width: 100%;
     border-radius: 0px;
   }
 }
 
 @media (max-width: 450px) {
-  .incomplete-tasks-add-data input {
+  .overdue-tasks-schedule-inner input {
     width: 95%;
   }
 }
