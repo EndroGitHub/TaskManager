@@ -1,5 +1,6 @@
 import CustomAlert from "../custom components/custom alert/CustomAlert";
 import "./OverdueTasks.css";
+import { getTodayDate } from "../Date";
 import { FormEvent, ChangeEvent, useEffect, useState } from "react";
 
 type taskDataType = {
@@ -37,7 +38,7 @@ const OverdueTasks = () => {
       let data: taskDataType = JSON.parse(localStorage.getItem("tasks")!);
       if (data.length > 0) {
         setFullData(data);
-        let todayDate = new Date().toISOString().slice(0, 10);
+        let todayDate = getTodayDate();
         let overdueTaskData: taskDataType = [];
         let index = 0;
 
@@ -79,7 +80,7 @@ const OverdueTasks = () => {
 
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (dateValue < new Date().toISOString().slice(0, 10)) {
+    if (dateValue < getTodayDate()) {
       setDateValue("");
       setShowAlert(true);
     } else {

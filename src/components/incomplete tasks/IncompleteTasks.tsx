@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import "./IncompleteTasks.css";
+import { getTodayDate } from "../Date";
 import CustomAlert from "../custom components/custom alert/CustomAlert";
 
 type taskDataType = {
@@ -38,8 +39,7 @@ const IncompleteTasks = () => {
   const [activeTaskId, setActiveTaskId] = useState<number>(0);
 
   useEffect(() => {
-    let todayDate = new Date().toISOString().slice(0, 10);
-    setDateToday(todayDate);
+    setDateToday(getTodayDate());
     getTaskData();
     setDataAdded(false);
     setDataRemoved(false);
@@ -51,7 +51,7 @@ const IncompleteTasks = () => {
       let data: taskDataType = JSON.parse(localStorage.getItem("tasks")!);
       if (data.length > 0) {
         setFullData(data);
-        let todayDate = new Date().toISOString().slice(0, 10);
+        let todayDate = getTodayDate();
         let incompleteTaskData: taskDataType = [];
         let index = 0;
 

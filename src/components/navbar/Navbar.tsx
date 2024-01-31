@@ -1,6 +1,7 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getTodayDate } from "../Date";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -24,9 +25,7 @@ const Navbar = () => {
 
   const [destination, setDestination] = useState<string>(value);
   const [showOptions, setShowOptions] = useState<boolean>(false);
-  const [dateToday, setDateToday] = useState<string>(
-    new Date().toISOString().slice(0, 10)
-  );
+  const [dateToday, setDateToday] = useState<string>(getTodayDate());
 
   const changeDestination = (value: number) => {
     if (value === 1) {
