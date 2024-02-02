@@ -230,7 +230,10 @@ const IncompleteTasks = () => {
         className="incomplete-tasks-outer"
       >
         <div className="incomplete-tasks-inner">
-          <div className="incomplete-tasks-add-btn">
+          <div
+            style={hideTask ? { filter: "blur(10px)" } : {}}
+            className="incomplete-tasks-add-btn"
+          >
             <button
               onClick={() => {
                 setIsAdding(true);
@@ -240,7 +243,10 @@ const IncompleteTasks = () => {
             </button>
           </div>
 
-          <div className="incomplete-tasks-heading">
+          <div
+            style={hideTask ? { filter: "blur(10px)" } : {}}
+            className="incomplete-tasks-heading"
+          >
             <h1>Incomplete Tasks</h1>
           </div>
 
@@ -253,8 +259,8 @@ const IncompleteTasks = () => {
               return (
                 <div
                   style={
-                    hideTask && ins.taskId === activeTaskId
-                      ? { border: "2px solid white" }
+                    hideTask && ins.taskId !== activeTaskId
+                      ? { filter: "blur(10px)" }
                       : {}
                   }
                   className="incomplete-tasks-data"
